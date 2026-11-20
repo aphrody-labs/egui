@@ -378,6 +378,7 @@ impl Painter {
                         usage: wgpu::TextureUsages::RENDER_ATTACHMENT
                             | wgpu::TextureUsages::TEXTURE_BINDING,
                         view_formats: &[depth_format],
+                        texture_binding_view_dimension: None,
                     })
                     .create_view(&wgpu::TextureViewDescriptor::default()),
             );
@@ -405,6 +406,7 @@ impl Painter {
                         format: texture_format,
                         usage: wgpu::TextureUsages::RENDER_ATTACHMENT,
                         view_formats: &[texture_format],
+                        texture_binding_view_dimension: None,
                     })
                     .create_view(&wgpu::TextureViewDescriptor::default()),
             );
